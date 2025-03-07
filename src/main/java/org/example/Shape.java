@@ -10,5 +10,5 @@ abstract class Shape {
 
     abstract double squareCounter();
 
-    abstract double squarePerimeter();
+    abstract double perimeterCounter();
 }
