@@ -28,4 +28,20 @@ public class ShapeUtil {
             createRandomRectangle();
         }
     }
+
+    double calculateArea(Shape[] shapes){
+        double commonSquare = 0;
+        for (Shape shape: shapes){
+            commonSquare += shape.squareCounter();
+        }
+        return commonSquare;
+    }
+
+    double calculatePerimeter(Shape[] shapes){
+        double commonPerimeter = 0;
+        for (Shape shape: shapes){
+            commonPerimeter += shape.perimeterCounter();
+        }
+        return commonPerimeter;
+    }
 }
