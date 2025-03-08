@@ -44,4 +44,12 @@ public class ShapeUtil {
         }
         return commonPerimeter;
     }
+
+    double calculateArea(Shape shape) {
+        return shape.squareCounter();
+    }
+
+    double calculatePerimeter(Shape shape) {
+        return shape.perimeterCounter();
+    }
 }
