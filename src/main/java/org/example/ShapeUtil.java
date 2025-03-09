@@ -1,22 +1,23 @@
 package org.example;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class ShapeUtil {
     Random random = new Random();
 
-    Circle createRandomCircle(){
+    public Circle createRandomCircle(){
         return new Circle(1 + random.nextDouble(10), "Random Circle");
     }
 
-    Square createRandomSquare(){
+    public Square createRandomSquare(){
         return new Square(1 + random.nextDouble(10), "Random Square");
     }
 
-    Rectangle createRandomRectangle(){
+    public Rectangle createRandomRectangle(){
         return new Rectangle(1 + random.nextDouble(10), 1 + new Random().nextDouble(10), "Random Rectangle");
     }
 
-    void createRandomShape(){
+    public void createRandomShape(){
         int number = 1 + random.nextInt(3);
         if (number==1){
             createRandomCircle();
@@ -29,7 +30,7 @@ public class ShapeUtil {
         }
     }
 
-    double calculateArea(Shape[] shapes){
+    public double calculateArea(ArrayList<Shape> shapes){
         double commonSquare = 0;
         for (Shape shape: shapes){
             commonSquare += shape.squareCounter();
@@ -37,7 +38,7 @@ public class ShapeUtil {
         return commonSquare;
     }
 
-    double calculatePerimeter(Shape[] shapes){
+    public double calculatePerimeter(ArrayList<Shape> shapes){
         double commonPerimeter = 0;
         for (Shape shape: shapes){
             commonPerimeter += shape.perimeterCounter();
@@ -45,11 +46,11 @@ public class ShapeUtil {
         return commonPerimeter;
     }
 
-    double calculateArea(Shape shape) {
+    public double calculateArea(Shape shape) {
         return shape.squareCounter();
     }
 
-    double calculatePerimeter(Shape shape) {
+    public double calculatePerimeter(Shape shape) {
         return shape.perimeterCounter();
     }
 }

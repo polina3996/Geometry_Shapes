@@ -1,6 +1,6 @@
 package org.example;
 
-abstract class Shape {
+public abstract class Shape {
 
     private String title;
 

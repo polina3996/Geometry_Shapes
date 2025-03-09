@@ -1,10 +1,18 @@
+import org.example.Rectangle;
 import org.example.Square;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class SquareTest {
-    private Square square = new Square(3, "Square1");;
+    private Square square;
+
+    @BeforeEach
+    void setUp() {
+        square = new Square(3, "Square1");
+    }
 
     @Test
     public void squareCounterTest(){

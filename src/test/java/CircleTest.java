@@ -1,11 +1,17 @@
 import org.example.Circle;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class CircleTest {
-    private Circle circle = new Circle(5, "Circle1");;
+    private Circle circle;
+
+    @BeforeEach
+    void setUp() {
+        circle = new Circle(5, "Circle1");
+    }
 
     @Test
     public void squareCounterTest(){
