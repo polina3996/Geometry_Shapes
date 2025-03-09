@@ -12,6 +12,19 @@ public class Rectangle extends Shape{
     }
 
     @Override
+    public boolean equals(Object o){
+        if (this == o){
+            return true;
+        }
+        else if (o == null || (getClass() != o.getClass())) {
+            return false;
+        }
+        return ((this.edge1 == ((Rectangle) o).edge1) && (this.edge2 == ((Rectangle) o).edge2) &&
+                (this.squareCounter() == ((Rectangle) o).squareCounter()) &&
+                (this.perimeterCounter() == ((Rectangle) o).perimeterCounter()));
+    }
+
+    @Override
     public double squareCounter(){
         return this.edge1*this.edge2;
     }

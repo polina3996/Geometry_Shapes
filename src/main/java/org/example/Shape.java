@@ -8,7 +8,10 @@ public abstract class Shape {
         this.title = title;
     }
 
+    public abstract boolean equals(Object o);
+
     abstract double squareCounter();
 
     abstract double perimeterCounter();
+
 }

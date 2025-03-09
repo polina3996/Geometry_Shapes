@@ -8,6 +8,18 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
+    @Override
+    public boolean equals(Object o){
+        if (this == o){
+            return true;
+        }
+        else if (o == null || (getClass() != o.getClass())) {
+            return false;
+        }
+        return ((this.radius == ((Circle) o).radius) &&
+                (this.squareCounter() == ((Circle) o).squareCounter()) &&
+                (this.perimeterCounter() == ((Circle) o).perimeterCounter()));
+    }
 
     @Override
     public double squareCounter(){
